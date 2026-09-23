@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { blankTask, rating, levels, analyzeDescription, validateAnalysis, validateTask, validateProposal, safeUrl, parseSavedState } from '../src/logic/domain.js';
-import { seedState } from '../src/logic/data.js';
-import { loadState, saveState } from '../src/logic/storage.js';
+import { blankTask, rating, levels, analyzeDescription, validateAnalysis, validateTask, validateProposal, safeUrl, parseSavedState } from '../src/domain.js';
+import { seedState } from '../src/data.js';
+import { loadState, saveState } from '../src/storage.js';
 
 test('score requires both fields in combined groups and ignores whitespace', () => {
   const task = { ...blankTask(), context: 'Контекст', contact: 'Контакт', data: '   ' };
